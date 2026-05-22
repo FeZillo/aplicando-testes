@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EB828DA8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicandoTestes.UnitTests", "tests\AplicandoTestes.UnitTests\AplicandoTestes.UnitTests.csproj", "{24495323-1599-4185-A49E-484584F90E7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicandoTestes.MockTests", "tests\AplicandoTestes.MockTests\AplicandoTestes.MockTests.csproj", "{D280756E-AF94-4690-B666-FF95B7B6A74E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +30,14 @@ Global
 		{24495323-1599-4185-A49E-484584F90E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24495323-1599-4185-A49E-484584F90E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24495323-1599-4185-A49E-484584F90E7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D280756E-AF94-4690-B666-FF95B7B6A74E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D280756E-AF94-4690-B666-FF95B7B6A74E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D280756E-AF94-4690-B666-FF95B7B6A74E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D280756E-AF94-4690-B666-FF95B7B6A74E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E9CE6FA6-6BA7-4D3C-9269-18FD9C96E4BE} = {A3946751-0608-4655-99A6-BD289830FAE2}
 		{24495323-1599-4185-A49E-484584F90E7A} = {EB828DA8-9705-4FE0-B534-296C7CC4627A}
+		{D280756E-AF94-4690-B666-FF95B7B6A74E} = {EB828DA8-9705-4FE0-B534-296C7CC4627A}
 	EndGlobalSection
 EndGlobal

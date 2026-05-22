@@ -17,6 +17,19 @@ Essa abordagem e indicada quando a regra e deterministica e pequena o bastante p
 
 ![Print da execucao dos testes de unidade](docs/images/testes-unidade.svg)
 
+## Mock Objects
+
+Mock objects simulam dependencias que seriam caras, lentas ou instaveis em um teste automatizado. Neste projeto, `CreditAnalyzer` depende de `ICreditScoreService` para consultar um score de credito; nos testes, essa interface e substituida por um mock criado com Moq.
+
+Com isso, o teste controla exatamente o retorno da consulta de score e valida apenas a regra de negocio da analise de credito. O uso de Fluent Assertions deixa as verificacoes mais legiveis, enquanto o `Verify` do Moq confirma que a dependencia foi chamada como esperado.
+
+**Cenarios de exemplo:**
+
+1. Quando o score mockado e `820` e o valor solicitado respeita a renda, a analise deve aprovar o credito com risco baixo.
+2. Quando o score mockado e `420`, a analise deve rejeitar o credito com risco alto, mesmo que a renda seja suficiente.
+
+![Print da execucao dos testes com mock objects](docs/images/testes-mock-objects.svg)
+
 ## Barema
 
 (De 0 a 3) - Implementacao dos 3 tipos de testes apresentados no artigo (1 ponto para cada tipo de teste implementado)
