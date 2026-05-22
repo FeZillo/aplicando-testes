@@ -12,8 +12,8 @@ Essa abordagem e indicada quando a regra e deterministica e pequena o bastante p
 
 **Cenarios de exemplo:**
 
-1. Converter `32 °F` deve retornar `0 °C`, cobrindo o ponto de congelamento da agua.
-2. Converter `212 °F` deve retornar `100 °C`, cobrindo o ponto de ebulicao da agua.
+1. Converter `32 F` deve retornar `0 C`, cobrindo o ponto de congelamento da agua.
+2. Converter `212 F` deve retornar `100 C`, cobrindo o ponto de ebulicao da agua.
 
 ![Print da execucao dos testes de unidade](docs/images/testes-unidade.svg)
 
@@ -29,6 +29,19 @@ Com isso, o teste controla exatamente o retorno da consulta de score e valida ap
 2. Quando o score mockado e `420`, a analise deve rejeitar o credito com risco alto, mesmo que a renda seja suficiente.
 
 ![Print da execucao dos testes com mock objects](docs/images/testes-mock-objects.svg)
+
+## Testes BDD com SpecFlow
+
+Os testes BDD descrevem o comportamento esperado em uma linguagem proxima da regra de negocio. Neste projeto, o arquivo `TemperatureConversion.feature` contem os cenarios em formato Gherkin, e a classe `TemperatureConversionSteps` mapeia cada frase para chamadas reais ao codigo C#.
+
+Essa abordagem e util quando o teste precisa comunicar claramente o comportamento para pessoas tecnicas e nao tecnicas. O SpecFlow transforma os cenarios do arquivo `.feature` em testes automatizados executados pelo xUnit.
+
+**Cenarios de exemplo:**
+
+1. Dado `32 F`, quando o valor e convertido para Celsius, entao o resultado deve ser `0 C`.
+2. Dado `212 F`, quando o valor e convertido para Celsius, entao o resultado deve ser `100 C`.
+
+![Print da execucao dos testes BDD com SpecFlow](docs/images/testes-bdd-specflow.svg)
 
 ## Barema
 
